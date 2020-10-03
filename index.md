@@ -1,286 +1,315 @@
 
 <!DOCTYPE html>
-
-<head>
-
-  <meta charset="UTF-8">
-        <link rel="icon" type="image/png" sizes="250x250" href="https://sfmg1234.github.io/MGCounts/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="250x250" href="https://sfmg1234.github.io/MGCounts/favicon-32x32.png">
-</head>
-
-<style>
+<html>
+    <head>
+     <meta charset="UTF-8">
 
 
 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css">
+     <title>VS</title>
+    </head>
+    <body>
 
-
-.counter:before {
-        background-image: url("./path/to/your/profileimage.png");
-    }
-
-
+      <style>
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  background-color: #FF0000;
-  color: #FFF;
-  flex-direction: column;
   text-align: center;
+  font-family: Roboto;
+  background-color: white
 }
 
-.bg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  opacity: .25;
-  width: 50vmax;
-  height: auto;
-  filter: blur(3vmax);
-}
-
-.avatar {
-  width: 10vmax;
-  height: 10vmax;
-  border-radius: 100%;
-  margin-bottom: 2vmax;
-}
-
-.subscribers {
-  font-size: 10vmax;
-}
-
-big {
- font-size: 18px; 
-}
-
-small {
-  font-size: 14px;
-}
-
-
-body {
-        text-align: center
+          .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex: 3;
+        margin-bottom: 10%
     }
+
+
+#clicks {
+  font-size: 80px;
+}
 
 #subs {
-  font-size: 50px;
+  font-size: 80px;
 }
 
-#views {
-  font-size: 50px;
+#SubGap {
+  font-size: 80px;
 }
 
-#videoCount {
-  font-size: 50px;
+ #rate2 {
+  font-size: 40px;
+}
+
+#rate1 {
+  font-size: 40px;
+}
+
+#rate {
+  font-size: 40px;
+}
+
+#rate3 {
+  font-size: 40px;
+}
+
+ #rate4 {
+  font-size: 40px;
+}
+
+#rate5 {
+  font-size: 40px;
+}
+
+ #rate6 {
+  font-size: 40px;
+}
+
+#rate7 {
+  font-size: 40px;
+}
+
+#rate8 {
+  font-size: 40px;
 }
 
 
-h1{font-size:90px;}
+ img {
+    border-radius: 50%;
+  }
 
-h1 { color: #FFFFFF; background: linear-gradient sans-serif; }
+#img {
+    border: solid .5vh !Important;
+    border-radius: 100%;
+    border-color: rgb(79, 79, 79) !Important;
+}
 
-
-
-
-
-
-</style>
-
-
-<body>
-  
-  <h1>Subscriber Counter</h1>
-  <br>
-  <br>
-  <br>
- 
-<link rel=stylesheet href="https://sfmg1234.github.io/MGCounts/odometer-theme-default.css">
-<img id="img-bg" class="bg" src="https://yt3.ggpht.com/a-/AOh14GgWNp0Dp7-A6lmaH3vWw3GfhQxNFyAyH1KYqRGnqA=s100-c-k-c0xffffffff-no-rj-mo" width="50" height="50">
-<img id="img-avatar" class="avatar" src="https://yt3.ggpht.com/a-/AOh14GgWNp0Dp7-A6lmaH3vWw3GfhQxNFyAyH1KYqRGnqA=s100-c-k-c0xffffffff-no-rj-mo" width="50" height="50">
-<br>
-<br>
-<br>
-<div><big id="title">Video</big></div>
-
-<br>
-<br>
-
-
-<div class="info">
-  <div class="odometer subs" id="subs">0</div>
-  <div><small>Subscribers</small></div>
-</div>
+ </style>
 
 
 <div class="container">
-<h2>Total Views</h2>
-<div class="odometer" id="views">0</div>
-<h2>Channel Videos</h2>
-<div class="odometer" id="videoCount">0</div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div><big id="description">Description</big></div>
+<div>
 
 
 
-</div><link rel=stylesheet href="https://sfmg1234.github.io/MGCounts/odometer-theme-default.css">
-
-</body>
-
-
- <script src="https://sfmg1234.github.io/MGCounts/odometer.js.download"></script>
+<img class="img-fluid border rounded-circle shadow image" style="width: 150px;height: 150px;" src="https://yt3.ggpht.com/a/AATXAJzOcyc2UwB0vlV7SyfzwgU_La1FOFZmObW3HCH0VzM=s88-c-k-c0x00ffffff-no-rj">
+<h2 id="username">T-Series</h2>
+<div id="subs" class="odometer">0</div>
+</div>
 
 
-<script>
 
-var params = new URLSearchParams(document.location.search.substring(1));
-var CHANNEL_ID = params.get("id");
-//alert(document.location.host);
-//alert(CHANNEL_ID);
-//var CHANNEL_ID = "UCzsVMzUqVPd9taVz6VGY12g";
-
-const API_KEY = "AIzaSyCpCM4UEHC3ZBuAvAxUw6vJKQBrO9t0jJY";
-const API_URL = 'https://www.googleapis.com/youtube/v3/';
+<div>
+<img class="img-fluid border rounded-circle shadow image2" style="width: 150px;height: 150px;" src="https://bestanimations.com/Earth&Space/Earth/earthglobeanimation/globe-earth-animation-15-2.gif">
+<h2 id="username2">Global Clicker</h2>
+<div id="clicks" class="odometer">0</div>
+</div>
+</div>        
 
 
-var description_url = `${API_URL}channels?part=snippet&id=${CHANNEL_ID}&key=${API_KEY}`;
-var subscribers_url = `${API_URL}channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
-var picture_url = `${API_URL}channels?part=snippet&id=${CHANNEL_ID}&key=${API_KEY}`;
-var views_url = `${API_URL}channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
-var videoCount_url = `${API_URL}channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`;
 
 
-async function getGubbdescription() {
-  const response = await fetch(description_url);
-  const data = await response.json();
-  const description = data.items[0].snippet.description;
-  document.getElementById('description').innerHTML = description;
-}
+         <div class="container">
+<div>
 
-async function getGubbSubs() {
-  const response = await fetch(subscribers_url);
-  const data = await response.json();
-  const subs = data.items[0].statistics.subscriberCount;
-  document.getElementById('subs').innerHTML = subs;
-}
 
-async function getGubbViews() {
-  const response = await fetch(views_url);
-  const data = await response.json();
-  const views = data.items[0].statistics.viewCount;
-  document.getElementById('views').innerHTML = views;
-}
 
-async function getGubbvideoCount() {
-  const response = await fetch(views_url);
-  const data = await response.json();
-  const videoCount = data.items[0].statistics.videoCount;
-  document.getElementById('videoCount').innerHTML = videoCount;
-}
+<h4 class="title" id="ViewLabel" >Avg Clicks Per Second</h4>
+<div class="odometer" id="rate3">0</div>
 
-async function getGubbThumb() {
-  const response = await fetch(picture_url);
-  const data = await response.json();
-  const thumb = data.items[0].snippet.thumbnails.medium.url;
-  const title = data.items[0].snippet.title;
-  document.getElementById('img-bg').src = thumb;
-  document.getElementById('img-avatar').src = thumb;
-  document.getElementById('title').innerHTML = title;
-}
+
+
+</div>
+<div>
+
+
+
+<h4 class="title" id="ViewLabel" >Avg Clicks Per Minute</h4>
+<div class="odometer" id="rate4">0</div>
+
+
+
+
+</div>
+<div>
+
+<h4 class="title" id="ViewLabel" >Avg Clicks Per Hour</h4>
+<div class="odometer" id="rate5">0</div>
+
+</div>
 
 
 
 
 
-getGubbdescription();
-getGubbSubs();
-getGubbThumb();
-getGubbViews();
-getGubbvideoCount();
-//yourFunction();
+<div>
 
 
 
-function updatePage(){
-    var channel = document.getElementsByName("id").value;
-    var your_form = document.getElementById('SUBS_ID');
-    your_form.action = document.location.href + '?id=' + channel;
-}
+<h4 class="title" id="ViewLabel" >Avg Clicks Per Second</h4>
+<div class="odometer" id="rate">0</div>
 
 
 
-</script>
+</div>
+<div>
 
 
 
-    
-    
-<br>
-<br>
-<br>
-<br>
-<br>
+<h4 class="title" id="ViewLabel" >Avg Clicks Per Minute</h4>
+<div class="odometer" id="rate1">0</div>
 
-<center><form id = "SUB_ID" onsubmit="updatePage()">
-    <input type="text" name="id">
-    <input type="submit" value="Count!">
-</form></center>
+
+
+
+</div>
+<div>
+
+<h4 class="title" id="ViewLabel" >Avg Clicks Per Hour</h4>
+<div class="odometer" id="rate2">0</div>
+
+</div>
+</div> 
+
+
+
+
+        <div>Gap</div>
+        <div class="odometer" id="SubGap">0</div>
+
+                 <br>
+                 <br>
+                 <br>
+
+</div> 
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+      <script>
+
+
+ var avg = [];
+ var avg2 = [];
+ var avg3 = [];    
+
+        var count1 = 0; //sub count from 1st channel
+        var count2 = 0; //sub count form 2nd channel
+
+
+
+
+
+
+       async function getSFStat() {
+        let request = await fetch('https://api.allorigins.win/raw?url=http://global-clicker.mrcode.io/getpoints', { mode: "cors" })
+        let data = await request.json().catch(() => {})
+        if (!data) return;
+        clicks.innerHTML = data
+        count2 = data
+
+        avg.push (data)
+        if (avg.length >= 60000) {avg.shift()}
+        var count = 0;
+        for(var i = 0; i < avg.length;i++) {
+          if(i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i-1]))
+          }
+        }
+        var deta = count/avg.length 
+        rate.innerHTML = Math.floor(deta)
+       rate1.innerHTML = Math.floor(deta*60)
+     rate2.innerHTML = Math.floor(deta*3600)
+
+
+
+
+     }
+    setInterval(getSFStat, 3000)
+    getSFStat()
+
+
+
+async function getSFStats() {
+        let request = await fetch('https://api.allorigins.win/raw?url=https://mixerno.space/api/youtube/estimated/user/UCq-Fj5jknLsUf-MWSy4_brA', { mode: "cors" })
+        let data = await request.json().catch(() => {})
+        if (!data) return;
+        subs.innerHTML = Math.floor(data.SubscriberCount)
+        count1 = Math.floor(data.SubscriberCount)
+       SubGap.innerHTML = count1-count2;
+       avg2.push (data.SubscriberCount)
+        if (avg2.length >= 60000) {avg2.shift()}
+        var count = 0;
+        for(var i = 0; i < avg2.length;i++) {
+          if(i == 0) {
+            count = count + (avg2[i] - parseFloat(avg2[i]))
+          } else {
+            count = count + (parseFloat(avg2[i]) - parseFloat(avg2[i-1]))
+          }
+        }
+        var deta = count/avg2.length 
+        rate3.innerHTML = Math.floor(deta)
+       rate4.innerHTML = Math.floor(deta*60)
+     rate5.innerHTML = Math.floor(deta*3600)
+
+
+     }
+    setInterval(getSFStats, 3000)
+    getSFStats()    
+
+
+ async function getSFStatss() {
+        let request = await fetch('https://api.allorigins.win/raw?url=https://mixerno.space/api/youtube/estimated/user/UCq-Fj5jknLsUf-MWSy4_brA', { mode: "cors" })
+        let data = await request.json().catch(() => {})
+        if (!data) return;
+
+       SubGap.innerHTML = count1-count2;
+       avg3.push (count1-count2)
+        if (avg2.length >= 60000) {avg2.shift()}
+        var count = 0;
+        for(var i = 0; i < avg2.length;i++) {
+          if(i == 0) {
+            count = count + (avg2[i] - parseFloat(avg2[i]))
+          } else {
+            count = count + (parseFloat(avg2[i]) - parseFloat(avg2[i-1]))
+          }
+        }
+        var deta = count/avg2.length 
+        rate6.innerHTML = Math.floor(deta)
+       rate7.innerHTML = Math.floor(deta*60)
+     rate8.innerHTML = Math.floor(deta*3600)
+
+
+     }
+    setInterval(getSFStatss, 3000)
+    getSFStatss()    
+
+
+ //yourFunction();
+
+
+
+         var params = location.href.split('&id=');
+        var channel_id = params[1];
+        var channel_id2 = params[2];
+        var count1 = 0;
+        var count2 = 0;
+
+
+
+
+
+
+     </script>
     <br>
     <br>
-<h3>Channel ID</h3>
+        <br>
+            <br>
+                <br>
 
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-
+    </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-177075755-1');
-</script>
