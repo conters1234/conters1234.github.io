@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+   
+       <meta charest="UTF-8">
+     <link rel="icon" type="image/png" sizes="250x250" href="https://sfmg1234.github.io/MGCounts/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="250x250" href="https://sfmg1234.github.io/MGCounts/favicon-32x32.png">
+<style>
+.counter:before {
+        background-image: url("./path/to/your/profileimage.png");
+    }
+
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background-color: #FF0000;
+  color: #FFF;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: .25;
+  width: 50vmax;
+  height: auto;
+  filter: blur(3vmax);
+}
+
+.avatar {
+  width: 10vmax;
+  height: 10vmax;
+  border-radius: 100%;
+  margin-bottom: 2vmax;
+}
+
+.subscribers {
+  font-size: 10vmax;
+}
+
+big {
+ font-size: 18px; 
+}
+
+small {
+  font-size: 14px;
+}
+
+
+body {
+        text-align: center
+    }
+
+#SubscriberCount {
+  font-size: 50px;
+}
+
+#subsapi {
+  font-size: 20px;
+}
+
+#totalviews {
+  font-size: 50px;
+}
+
+#videos {
+  font-size: 50px;
+}
+
+
+img {
+    border-radius: 50%;
+  }
+
+#img {
+    border: solid .5vh !Important;
+    border-radius: 100%;
+    border-color: rgb(79, 79, 79) !Important;
+}
+
+
+#nameuser {
+  font-size: 50px;
+}
+
+
+h1{font-size:90px;}
+
+h1 { color: #FFFFFF; background: linear-gradient sans-serif; }
+
+</style>
+
+
+
+<html>
+
+
+<strong><head><title>Estimated Subscriber Counter</title></strong>
+  <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.52XXGKCnk0GkwJ5UQKvQVAHaHa&pid=Api">
+
+<link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel=stylesheet href="https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css">      
+<body>
+<h1>Subscriber Counter</h1><br>
+<div class="container">
+
+<img class="img-fluid border rounded-circle shadow image" style="width: 150px;height: 150px;" src="https://web-stories.s3.us-west-2.amazonaws.com/huaPiB3qL1aE7gMCsWJxu9JLiLF3/hua/huaPiB3qL1aE7gMCsWJxu9JLiLF3_edab3e65-1873-402f-b864-12a02541f159.jpg">
+<br>
+<br>
+<br>
+
+<div><big id="nameuser"></big></div>
+<br>
+<br>
+
+<h2>Subscribers</h2>
+<div class="odometer" id="SubscriberCount">0</div>
+</div>
+
+
+
+
+
+<h2>Total Views</h2>
+<div class="odometer" id="totalviews">0</div>
+
+
+
+<h2>Videos</h2>
+<div class="odometer" id="videos">0</div>
+
+
+
+
+
+
+
+
+<h6>API</h6>
+<div class="odometer" id="subsapi">0</div>
+
+
+
+<div class="container"> 
+</div>
+
+
+
+
+
+
+
+  <script src="https://sfmg1234.github.io/MGCounts/odometer.js.download"></script>
+
+
+
+
+
+
+
+<script>
+ 
+var params = new URLSearchParams(document.location.search.substring(1));
+var CHANNEL_ID = params.get("id");
+//alert(document.location.host);
+//alert(CHANNEL_ID);
+//var CHANNEL_ID = "huaPiB3qL1aE7gMCsWJxu9JLiLF3";
+ 
+ 
+ 
+ 
+ 
+ //yourFunction();
+ 
+ 
+ 
+ function updatePage(){
+    var channel = document.getElementsByName("id").value;
+    var your_form = document.getElementById('SUBS_ID');
+    your_form.action = document.location.href + '?id=' + channel;
+}
+ 
+ 
+ 
+ 
+ 
+ function updateimage(image) {
+    document.querySelector(".image").src = image;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ document.bgColor = "#333"
+    const loadTime = Date.now()
+    
+    class formatDate extends Date {
+        format() {
+            const days =["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+            return `${days[this.getUTCDay()]} at ${this.getUTCHours() < 10 ? "0" + this.getUTCHours() : this.getUTCHours()}:${this.getUTCMinutes() < 10 ? "0" + this.getUTCMinutes() : this.getUTCMinutes()}`
+        }
+    }
+    
+    async function getCoronaStats() {
+        let request = await fetch('https://api.allorigins.win/raw?url=https://mixerno.space/api/youtube/estimated/user/'+CHANNEL_ID+'', { mode: "cors" })
+        let data = await request.json().catch(() => {})
+        if (!data) return;
+        SubscriberCount.innerHTML = Math.floor(data.SubscriberCount)
+        subsapi.innerHTML = data.subsapi
+        totalviews.innerHTML = data.totalviews
+        nameuser.innerHTML = data.name
+        updateimage(data.image);
+        videos.innerHTML = data.videos
+  
+  
+    
+   lastUpdate.innerHTML = `Data last updated: ${new formatDate(data.updated).format()} UTC`
+ 
+
+
+
+   }
+    setInterval(getCoronaStats, 2000)
+    getCoronaStats()
+    
+    function updateTime() {
+        let seconds = 300 - ((Math.round((Date.now() - loadTime) / 1000)) % 300)
+        let mins = Math.floor(seconds/60)
+        let secs = seconds % 60
+        if (secs < 10) secs = "0" + secs
+        info.innerHTML = `Counts will update in ${mins}:${secs}, if any data is changed`
+    }
+    setInterval(updateTime, 2000 )
+</script>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<center><form id = "SUB_ID" onsubmit="updatePage()">
+    <input type="text" name="id">
+    <input type="submit" value="Count!">
+</form></center>
+    <br>
+    <br>
+<h3>Channel ID</h3>
+
+
+   
+   
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177075755-1');
+</script>
+ 
+   
+   
+   
+     <style> 
+      
+.bg { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; opacity: .25; width: 50vmax; height: auto; filter: blur(3vmax); } 
+.avatar { width: 10vmax; height: 10vmax; border-radius: 100%; margin-bottom: 2vmax; }
+   
+   </style>
+  
+   
+  
+   
+   
+   
+</html>
